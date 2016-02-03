@@ -12,7 +12,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 
     private final static String data_base_name = "local_data_test.db";
-    private final static int mCurrentVersion = 1;
+    private final static int mCurrentVersion = 2;
 
     public DataBaseHelper(Context context) {
         super(context,data_base_name, null, mCurrentVersion);
@@ -30,7 +30,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if(oldVersion != newVersion && newVersion == mCurrentVersion) {
-            db.execSQL("ALERT TABLE person add phone VARCHAR(12)");
+            db.execSQL("ALTER TABLE person ADD phone VARCHAR(12) NULL");
         }
     }
 }
