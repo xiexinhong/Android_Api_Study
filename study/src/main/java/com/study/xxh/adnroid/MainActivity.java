@@ -12,7 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.android.xxh.study.R;
+
 import com.study.xxh.adnroid.localdata.LocalDataDemoListActivity;
 
 
